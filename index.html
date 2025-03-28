@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adham Alfrnwany - Content Creator</title>
+    <meta name="description" content="Professional content creator on TikTok, Instagram and Facebook">
+    <meta name="keywords" content="TikTok, Instagram, Facebook, content creator, social media">
+    <meta name="author" content="Adham Alfrnwany">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 4px solid #fff;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .profile-photo::after {
+            content: "Your Photo";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #6e48aa;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            opacity: 0.9;
+        }
+        
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: white;
+            color: #6e48aa;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (min-width: 768px) {
+            .social-link {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .facebook:hover {
+            background: #1877f2;
+            color: white;
+        }
+        
+        .instagram:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+        
+        .tiktok:hover {
+            background: #000;
+            color: #ff0050;
+        }
+        
+        /* Content Sections */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 2rem 0;
+        }
+        
+        @media (min-width: 600px) {
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 900px) {
+            .content-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .platform-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .platform-card h2 {
+            color: #6e48aa;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .platform-card p {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #6e48aa;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        @media (min-width: 768px) {
+            .btn {
+                font-size: 1rem;
+            }
+        }
+        
+        .btn:hover {
+            background: #9d50bb;
+            box-shadow: 0 4px 12px rgba(157, 80, 187, 0.3);
+        }
+        
+        /* Projects Section */
+        .projects-section {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 0 10px;
+        }
+        
+        .projects-section h2 {
+            color: #6e48aa;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: #333;
+            color: white;
+            margin-top: auto;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer a {
+            color: #9d50bb;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-photo"></div>
+            <h1>Adham Alfrnwany</h1>
+            <p>Content Creator | Social Media Influencer</p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100093016569562" class="social-link facebook" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/adhamo_x?igsh=cGzdHZINWt5znhx" class="social-link instagram" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@2xxic_adham?_t=zs-8v47RZ53MVL&_r=1" class="social-link tiktok" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="content-grid">
+            <div class="platform-card">
+                <h2><i class="fab fa-facebook"></i> Facebook</h2>
+                <p>Follow me on Facebook for daily updates, live streams, and behind-the-scenes content.</p>
+                <a href="https://www.facebook.com/profile.php?id=100093016569562" class="btn" target="_blank">Visit Page</a>
+            </div>
+            
+            <div class="platform-card">
+                <h2><i class="fab fa-instagram"></i> Instagram</h2>
+                <p>Check out my Instagram for high-quality photos, stories, and reels.</p>
+                <a href="https://www.instagram.com/adhamo_x?igsh=cGzdHZINWt5znhx" class="btn" target="_blank">Visit Profile</a>
+            </div>
+            
+            <div class="platform-card">
+                <h2><i class="fab fa-tiktok"></i> TikTok</h2>
+                <p>Enjoy my creative short videos on TikTok - don't forget to like and follow!</p>
+                <a href="https://www.tiktok.com/@2xxic_adham?_t=zs-8v47RZ53MVL&_r=1" class="btn" target="_blank">Watch Videos</a>
+            </div>
+        </section>
+        
+        <section class="projects-section">
+            <h2>Latest Projects</h2>
+            <p>Stay tuned for exciting new content coming soon!</p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Adham Alfrnwany. All rights reserved.</p>
+            <p>
+                <a href="mailto:your@email.com">your@email.com</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
