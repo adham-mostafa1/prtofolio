@@ -466,6 +466,35 @@
                 max-height: 200px;
             }
         }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .product-img-container {
+                height: 250px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-col h3:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -542,7 +571,7 @@
                     <h3>Contact</h3>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Alexandria, Egypt</li>
-                        <li><i class="fas fa-phone"></i> 01150099843</li>
+                        <li><i class="fas fa-phone"></i> +20 115 009 9843</li>
                         <li><i class="fas fa-envelope"></i> info@yourstore.com</li>
                         <li><i class="fas fa-clock"></i> Sun-Thu: 9AM - 5PM</li>
                     </ul>
@@ -698,8 +727,8 @@
             
             orderDetails += `\nTotal: EGP ${total}`;
             
-            // Update WhatsApp link
-            const whatsappNumber = "01150099843";
+            // Update WhatsApp link with Egypt country code (+20) and formatted number
+            const whatsappNumber = "201150099843"; // Egypt country code +20 followed by 1150099843
             const encodedMessage = encodeURIComponent(orderDetails);
             checkoutBtn.href = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
             checkoutBtn.style.display = 'block';
